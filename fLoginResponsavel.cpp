@@ -3,25 +3,24 @@
 #include <vcl.h>
 #pragma hdrstop
 
-#include "fInicial.h"
+#include "fLoginResponsavel.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-#include "fLoginAluno.h"
-#include "fLoginResponsavel.h"
-#include "fLoginAdministrador.h"
-#include "fLoginProfessor.h"
+#include "fInicial.h"
 #pragma resource "*.dfm"
-TInicial *Inicial;
+TLoginResponsavel *LoginResponsavel;
 //---------------------------------------------------------------------------
-__fastcall TInicial::TInicial(TComponent* Owner)
+__fastcall TLoginResponsavel::TLoginResponsavel(TComponent* Owner)
 	: TForm(Owner)
 {
 }
+//---------------------------------------------------------------------------
 
-void __fastcall TInicial::bAdminClick(TObject *Sender)
+void __fastcall TLoginResponsavel::Inicial1Click(TObject *Sender)
 {
-	TLoginAdministrador *LoginAdministrador = new TLoginAdministrador(this);
-	LoginAdministrador->ShowModal();
-	LoginAdministrador->Free();
+	TInicial *Inicial = new TInicial(this);
+	Inicial->ShowModal();
+	Inicial->Free();
 }
 //---------------------------------------------------------------------------
+

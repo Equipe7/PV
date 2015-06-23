@@ -3,24 +3,31 @@
 #include <vcl.h>
 #pragma hdrstop
 
-#include "fLoginAluno.h"
+#include "fAdministradorInicial.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-#include "fInicial.h"
+#include "fAdminAluno.h"
 #pragma resource "*.dfm"
-TLoginAluno *LoginAluno;
+TAdminInicial *AdminInicial;
 //---------------------------------------------------------------------------
-__fastcall TLoginAluno::TLoginAluno(TComponent* Owner)
+__fastcall TAdminInicial::TAdminInicial(TComponent* Owner)
 	: TForm(Owner)
 {
 }
+
 //---------------------------------------------------------------------------
 
-void __fastcall TLoginAluno::Inicial1Click(TObject *Sender)
+void __fastcall TAdminInicial::bAlunosClick(TObject *Sender)
 {
-	TInicial *Inicial = new TInicial(this);
-	Inicial->ShowModal();
-	Inicial->Free();
+	TAdminAluno *CadastrarAluno = new TAdminAluno(this);
+	CadastrarAluno->ShowModal();
+	CadastrarAluno->Free();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAdminInicial::Sair1Click(TObject *Sender)
+{
+	this->Close();
 }
 //---------------------------------------------------------------------------
 

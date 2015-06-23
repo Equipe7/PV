@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef fLoginAlunoH
-#define fLoginAlunoH
+#ifndef fLoginResponsavelH
+#define fLoginResponsavelH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
@@ -11,7 +11,7 @@
 #include <Vcl.Imaging.pngimage.hpp>
 #include <Vcl.Menus.hpp>
 //---------------------------------------------------------------------------
-class TLoginAluno : public TForm
+class TLoginResponsavel : public TForm
 {
 __published:	// IDE-managed Components
 	TImage *Image1;
@@ -19,16 +19,16 @@ __published:	// IDE-managed Components
 	TEdit *eUsuario;
 	TLabel *lSenha;
 	TEdit *eSenha;
+	TButton *bEntrar;
 	TMainMenu *MainMenu1;
 	TMenuItem *Arquivo1;
 	TMenuItem *Inicial1;
-	TButton *bEntrar;
 	void __fastcall Inicial1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-	__fastcall TLoginAluno(TComponent* Owner);
+	__fastcall TLoginResponsavel(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TLoginAluno *LoginAluno;
+extern PACKAGE TLoginResponsavel *LoginResponsavel;
 //---------------------------------------------------------------------------
 #endif

@@ -1,11 +1,9 @@
-object Inicial: TInicial
+object LoginProfessor: TLoginProfessor
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
-  Caption = 'Culver Creek'
-  ClientHeight = 384
-  ClientWidth = 351
+  Caption = 'Login'
+  ClientHeight = 380
+  ClientWidth = 334
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,14 +11,13 @@ object Inicial: TInicial
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 80
     Top = 24
     Width = 177
-    Height = 129
+    Height = 137
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000000AF0000
       007D0806000000D464335100000A376943435073524742204945433631393636
@@ -456,61 +453,40 @@ object Inicial: TInicial
       0F1FDE4912B5B9246907E306D9D2F806034E6FC1DA6036F169971ADB6FA904F4
       2FAA18A5CE9CBA0C05A7FF07EE789C9C31E532970000000049454E44AE426082}
   end
-  object bAluno: TButton
-    Left = 120
-    Top = 169
-    Width = 97
-    Height = 25
-    Caption = 'Aluno'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
+  object lUsuario: TLabel
+    Left = 56
+    Top = 192
+    Width = 36
+    Height = 13
+    Caption = 'Usuario'
+  end
+  object lSenha: TLabel
+    Left = 56
+    Top = 224
+    Width = 30
+    Height = 13
+    Caption = 'Senha'
+  end
+  object eUsuario: TEdit
+    Left = 112
+    Top = 189
+    Width = 121
+    Height = 21
     TabOrder = 0
   end
-  object bResponsavel: TButton
-    Left = 120
-    Top = 200
-    Width = 97
-    Height = 25
-    Caption = 'Respons'#225'vel'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
+  object eSenha: TEdit
+    Left = 112
+    Top = 221
+    Width = 121
+    Height = 21
     TabOrder = 1
   end
-  object bProfessor: TButton
-    Left = 120
-    Top = 231
-    Width = 97
+  object bEntrar: TButton
+    Left = 112
+    Top = 256
+    Width = 75
     Height = 25
-    Caption = 'Professor'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
+    Caption = 'Entrar'
     TabOrder = 2
-  end
-  object bAdmin: TButton
-    Left = 120
-    Top = 262
-    Width = 97
-    Height = 25
-    Caption = 'Administrador'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = bAdminClick
   end
 end

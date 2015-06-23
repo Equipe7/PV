@@ -6,13 +6,11 @@
 //---------------------------------------------------------------------------
 #include <Vcl.Styles.hpp>
 #include <Vcl.Themes.hpp>
-USEFORM("fLoginAluno.cpp", LoginAluno);
-USEFORM("fLoginAdm.cpp", LoginAdm);
-USEFORM("fSobre.cpp", Sobre);
+USEFORM("fAdministradorInicial.cpp", AdminInicial);
+USEFORM("fAdminAluno.cpp", AdminAluno);
+USEFORM("fLoginAdministrador.cpp", LoginAdministrador);
 USEFORM("fInicial.cpp", Inicial);
-USEFORM("fAdmInical.cpp", AdmInicial);
-USEFORM("fCadastroProfessor.cpp", CadastroProf);
-USEFORM("fCadastroAluno.cpp", CadastroAluno);
+USEFORM("fAdminEditarAluno.cpp", AdminEditarAluno);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
@@ -21,7 +19,6 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 		TStyleManager::TrySetStyle("TabletDark");
-		Application->Title = "Culver Creek";
 		Application->CreateForm(__classid(TInicial), &Inicial);
 		Application->Run();
 	}
